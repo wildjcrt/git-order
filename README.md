@@ -15,3 +15,7 @@
 `-i`: rebase 互動模式。
 
 `-k`: 允許 commit 保持沒有變動紀錄。
+
+## git commit 按照 AuthorDate 排序
+
+    $ git log --pretty="format:%at %Cblue%ad %Cred%h %Cgreen%an %Creset%s" --date=iso | sort -r | cut -d" " -f2- | less -R
